@@ -2,10 +2,8 @@ class Kbase < Formula
   # Developer Keyoxide: https://keyoxide.org/wkd/benn@bennherrera.dev
   desc "Build, maintain, navigate, visualize, render a knowledge base"
   homepage "https://github.com/benn-herrera/kbase"
-  # Stable names the newest TAGGED release: v0.8.2 is built but not tagged, so
-  # the source tarball for it does not exist yet. Move this tag when it does.
-  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.8.2.tar.gz"
-  sha256 "REPLACE WITH v0.8.2 tar.gz SHA256"
+  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "REPLACE WITH v0.9.0 tar.gz SHA256"
   license "MIT"
   head "https://github.com/benn-herrera/kbase.git", branch: "main"
 
@@ -21,7 +19,6 @@ class Kbase < Formula
 
   def install
     system "go", "build", *std_go_args, "./cmd"
-    bin.install "kbase"
   end
 
   # `kbase --version` prints exactly internal/version's Current, which is a bare
