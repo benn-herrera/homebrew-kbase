@@ -35,4 +35,3 @@ class Kbase < Formula
     assert_equal version.to_s, reported if active_spec_sym == :stable
   end
 end
-b
