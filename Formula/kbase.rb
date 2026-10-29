@@ -1,27 +1,25 @@
 class Kbase < Formula
-  desc "Build and maintain a knowledge base from LaTeX"
+  desc "Build, maintain, navigate, visualize, render a knowledge base"
   homepage "https://github.com/benn-herrera/kbase"
   # Stable names the newest TAGGED release: v0.8.2 is built but not tagged, so
   # the source tarball for it does not exist yet. Move this tag when it does.
-  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "e5722075b4f535d98596fdd81a2b384b40dad775ecb982b4536086bc96f70335"
+  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.8.2.tar.gz"
+  sha256 "REPLACE WITH v0.8.2 tar.gz SHA256"
   license "MIT"
-  head "https://github.com/benn-herrera/kbase.git", branch: "develop"
+  head "https://github.com/benn-herrera/kbase.git", branch: "main"
 
   depends_on "go" => :build
-  # Every stage of a build commits its boundary through git, so a KB needs the
-  # repository's own git. pandoc parses the LaTeX, and dot draws the sheets.
+  # Every stage of a kb build commits its boundary through git, so a KB needs the
+  # repository's own git.
   depends_on "git"
+  # graphviz dot is required for rendering claim graph diagrams
   depends_on "graphviz"
-  # pandoc is not a core formula, so the fully qualified name taps jguer/pandoc.
+  # pandoc is required for build and export-latex operations.
+  # it is not a core formula, so the fully qualified name is required
   depends_on "jguer/homebrew-pandoc/pandoc"
 
   def install
-    # The dist tarball's build flag: `-tags=kbasedist` compiles out the
-    # development replays (`score --replay`, `build --replay`), which a user
-    # should not receive. std_go_args supplies `-trimpath`, the `-s -w` strip
-    # and `-o=bin/kbase` itself.
-    system "go", "build", *std_go_args(tags: "kbasedist"), "./cmd"
+    system "go", "build", *std_go_args, "./cmd"
     bin.install "kbase"
   end
 
