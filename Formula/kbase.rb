@@ -9,12 +9,12 @@ class Kbase < Formula
   head "https://github.com/benn-herrera/kbase.git", branch: "develop"
 
   depends_on "go" => :build
-  # pandoc is not a core formula, so the fully qualified name taps jguer/pandoc.
-  depends_on "jguer/homebrew-pandoc/pandoc"
   # Every stage of a build commits its boundary through git, so a KB needs the
   # repository's own git. pandoc parses the LaTeX, and dot draws the sheets.
   depends_on "git"
   depends_on "graphviz"
+  # pandoc is not a core formula, so the fully qualified name taps jguer/pandoc.
+  depends_on "jguer/homebrew-pandoc/pandoc"
 
   def install
     # The dist tarball's build flag: `-tags=kbasedist` compiles out the
@@ -35,3 +35,4 @@ class Kbase < Formula
     assert_equal version.to_s, reported if active_spec_sym == :stable
   end
 end
+b
