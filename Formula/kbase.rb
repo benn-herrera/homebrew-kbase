@@ -14,8 +14,7 @@ class Kbase < Formula
   # graphviz dot is required for rendering claim graph diagrams
   depends_on "graphviz"
   # pandoc is required for build and export-latex operations.
-  # it is not a core formula, so the fully qualified name is required
-  depends_on "jguer/homebrew-pandoc/pandoc"
+  depends_on "pandoc"
 
   def install
     system "go", "build", *std_go_args, "./cmd"

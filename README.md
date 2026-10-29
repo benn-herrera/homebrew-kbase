@@ -13,9 +13,7 @@ brew install kbase
 ```
 
 The build needs Go, and the installed binary needs `git` to record a build's stage commits, `pandoc`
-to parse LaTeX, and Graphviz `dot` to draw the claim-graph sheets. The formula depends on all four;
-pandoc is not in Homebrew core, so it is declared fully qualified and `brew` taps `jguer/pandoc`
-while resolving it.
+to parse LaTeX, and Graphviz `dot` to draw the claim-graph sheets. The formula depends on all four.
 
 `brew install --HEAD kbase` builds the repository's `develop` branch instead of the tagged release.
 
