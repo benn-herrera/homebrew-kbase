@@ -2,6 +2,9 @@
 
 `kbase` builds a knowledge base from LaTeX and maintains it. The formula here builds it from source.
 
+## Developer
+<https://keyoxide.org/wkd/benn@bennherrera.dev>
+
 ## Install
 
 ```sh

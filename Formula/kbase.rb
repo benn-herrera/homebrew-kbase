@@ -1,4 +1,5 @@
 class Kbase < Formula
+  # Developer Keyoxide: https://keyoxide.org/wkd/benn@bennherrera.dev
   desc "Build, maintain, navigate, visualize, render a knowledge base"
   homepage "https://github.com/benn-herrera/kbase"
   # Stable names the newest TAGGED release: v0.8.2 is built but not tagged, so
