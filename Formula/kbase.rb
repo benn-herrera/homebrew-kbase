@@ -3,7 +3,7 @@ class Kbase < Formula
   desc "Build, maintain, navigate, visualize, render a knowledge base"
   homepage "https://github.com/benn-herrera/kbase"
   url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "REPLACE WITH v0.9.0 tar.gz SHA256"
+  sha256 "b068bee613afee536d78f7f9e65d59946297076f31cfea1373f75f6a9b0e3e1a"
   license "MIT"
   head "https://github.com/benn-herrera/kbase.git", branch: "main"
 
