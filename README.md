@@ -1,6 +1,7 @@
 # Homebrew tap for kbase
 
-`kbase` builds a knowledge base from LaTeX and maintains it. The formula here builds it from source.
+[kbase](https://github.com/benn-herrera/kbase) builds a knowledge base from LaTeX and maintains it. 
+The formula in this tap builds it from source.
 
 ## Developer
 <https://keyoxide.org/wkd/benn@bennherrera.dev>
