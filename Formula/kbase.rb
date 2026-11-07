@@ -2,8 +2,8 @@ class Kbase < Formula
   # Developer Keyoxide: https://keyoxide.org/wkd/benn@bennherrera.dev
   desc "Build, maintain, navigate, visualize, render a knowledge base"
   homepage "https://github.com/benn-herrera/kbase"
-  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "b34c94bbad88fbfc1d001d7bb9a9700661cbe5215b17066bece888fc81236ec1"
+  url "https://github.com/benn-herrera/kbase/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "2c12a50af8fefc244cd207b42a5b45caba77415dfea9dfcd8790856deab48ecf"
   license "MIT"
   head "https://github.com/benn-herrera/kbase.git", branch: "main"
 
